@@ -1,8 +1,9 @@
 // Dependencies
 // ================================================================================
+var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
-var express = require("express");
+
 // Sets up the Express App
 var app = express();
 var PORT = 3000;
@@ -10,13 +11,17 @@ var PORT = 3000;
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
-
-
+// points server to the route files
+// ================================================================================
+require("./app/data/friends");
+// require("./app/public/survey");
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
 
 // Starts the server to begin listening
 // ================================================================================
-
-
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
+
+  
