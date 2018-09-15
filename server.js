@@ -14,7 +14,6 @@ app.use(bodyParser.json());
 // points server to the route files
 // ================================================================================
 require("./app/data/friends");
-// require("./app/public/survey");
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
