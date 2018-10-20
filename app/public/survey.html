@@ -6,12 +6,10 @@
     <title>FriendFinder</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 
 
@@ -423,7 +421,13 @@
             } else {
                 console.log("Please make sure all questions are answered and all required fields are complete.")
                
-               
+            }
+            for (var i = 0; i < friendsData.length; i++) {
+                
+                for (var i = 0; i < userInfo.scores.length; i++) {
+                    parseInt(userInfo.scores[i] - friendsData.scores[i]);
+
+                }
             }
         });
 
